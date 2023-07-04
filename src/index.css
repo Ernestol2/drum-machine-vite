@@ -1,0 +1,107 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  user-select: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(56, 54, 54);
+}
+
+.title h1 {
+  font-size: 35px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+#drum-machine {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  width: 500px;
+  background-color: #4d4d4d;
+  padding: 30px;
+  outline: 3px solid black;
+  border-radius: 15px;
+}
+
+.drum-pads {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.drum-pad {
+  border: 2px solid black;
+  width: 100px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  background-color: rgb(192, 192, 192);
+  border-radius: 5px;
+  box-shadow: 4px 4px 6px black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.drum-pad:hover {
+  background-color: rgb(192, 160, 160);
+}
+
+.drum-pad:active {
+  transform: scale(.9)
+}
+
+#display {
+  background-color: rgb(192, 192, 192);
+  width: 100px;
+  height: 35px;
+  margin-top: 15vh;
+  margin-left: 5vh;
+  text-align: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.footer {
+  color: white;
+  font-size: 13px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media  screen and (max-width: 500px) {
+  #drum-machine {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .drum-pad {
+    width: 80px;
+    height: 70px;
+  }
+
+  #display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+  }
+
+  
+}
